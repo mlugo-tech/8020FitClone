@@ -10,6 +10,11 @@
       "StackName": "amplify-8020fit-dev-b2709",
       "StackId": "arn:aws:cloudformation:us-east-1:650251698231:stack/amplify-8020fit-dev-b2709/c14c5c70-ebc0-11ef-942c-0affceca2edf",
       "AmplifyAppId": "d29rx92dv6ggjc"
+    },
+    "categories": {
+      "auth": {
+        "8020fit787121ee": {}
+      }
     }
   }
 }
