@@ -1,4 +1,20 @@
 {
+  "api": {
+    "UserProfileAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "saveUserProfile"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "8020fit787121ee": {
       "customAuth": false,
@@ -25,6 +41,45 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "saveUserProfile": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "UserProfile"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_saveUserProfile_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "saveUserProfile"
+        }
+      ]
+    },
+    "AMPLIFY_function_saveUserProfile_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "saveUserProfile"
+        }
+      ]
     }
   },
   "storage": {

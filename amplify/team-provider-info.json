@@ -9,7 +9,8 @@
       "UnauthRoleName": "amplify-8020fit-dev-b2709-unauthRole",
       "StackName": "amplify-8020fit-dev-b2709",
       "StackId": "arn:aws:cloudformation:us-east-1:650251698231:stack/amplify-8020fit-dev-b2709/c14c5c70-ebc0-11ef-942c-0affceca2edf",
-      "AmplifyAppId": "d29rx92dv6ggjc"
+      "AmplifyAppId": "d29rx92dv6ggjc",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-8020fit-dev-b2709-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
@@ -17,6 +18,15 @@
       },
       "storage": {
         "UserProfile": {}
+      },
+      "function": {
+        "saveUserProfile": {
+          "deploymentBucketName": "amplify-8020fit-dev-b2709-deployment",
+          "s3Key": "amplify-builds/saveUserProfile-4a552b5a6c3877454b48-build.zip"
+        }
+      },
+      "api": {
+        "UserProfileAPI": {}
       }
     }
   }
