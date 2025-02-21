@@ -40,7 +40,7 @@ const App = () => {
         confirmationCode,
       });
       console.log("User confirmed successfully!");
-      setIsSignUp(false); // Switch to Sign In after confirmation
+      setIsSignUp(false); // Switch to sign-in mode
     } catch (error) {
       console.error("Confirmation error:", error);
     }
@@ -75,14 +75,14 @@ const App = () => {
     }
   };
   
-  const API_URL = "https://b6ug3cal1b.com/save-profile"; // Replace with your actual API URL
+  const API_URL = "https://b6ug3cal1b.com/save-profile"; 
 
   // Handle user sign-in
   const handleSignIn = async () => {
     try {
       const user = await signIn({ username: email, password });
       console.log("User signed in:", user);
-      setUserSignedIn(true); // Mark user as signed in
+      setUserSignedIn(true); // Set user sign-in state
     } catch (error) {
       console.error("Sign in error:", error);
     }
